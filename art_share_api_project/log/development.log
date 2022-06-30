@@ -2519,3 +2519,291 @@ Completed 404 Not Found in 10ms (ActiveRecord: 7.5ms)
 ActiveRecord::RecordNotFound - Couldn't find ArtworkShare with 'id'=1:
   app/controllers/artwork_shares_controller.rb:19:in `destroy'
 
+Started GET "/users/1/artworks" for ::1 at 2022-06-30 15:10:46 -0400
+  [1m[35m (2.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/appacademystudent/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.8/lib/active_record/log_subscriber.rb:98
+Processing by UsersController#index_artworks as */*
+  Parameters: {"user_id"=>"1"}
+Completed 404 Not Found in 70ms (ActiveRecord: 13.8ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find User without an ID:
+  app/controllers/users_controller.rb:8:in `index_artworks'
+
+  [1m[36mUser Load (3.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Started GET "/users/1/artworks" for ::1 at 2022-06-30 15:39:04 -0400
+  [1m[35m (2.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/appacademystudent/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.8/lib/active_record/log_subscriber.rb:98
+Processing by ArtworksController#index as */*
+  Parameters: {"user_id"=>"1"}
+Completed 404 Not Found in 100ms (ActiveRecord: 18.8ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Artwork without an ID:
+  app/controllers/artworks_controller.rb:4:in `index'
+
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Started GET "/users/1/artworks" for ::1 at 2022-06-30 15:41:08 -0400
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/appacademystudent/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.8/lib/active_record/log_subscriber.rb:98
+Processing by ArtworksController#index as */*
+  Parameters: {"user_id"=>"1"}
+Completed 404 Not Found in 93ms (ActiveRecord: 16.8ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Artwork without an ID:
+  app/controllers/artworks_controller.rb:4:in `index'
+
+Started GET "/users/1" for ::1 at 2022-06-30 15:42:25 -0400
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (6.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:20
+Completed 200 OK in 64ms (Views: 2.1ms | ActiveRecord: 22.2ms)
+
+
+Started GET "/users/1/artworks" for ::1 at 2022-06-30 15:43:35 -0400
+Processing by ArtworksController#index as */*
+  Parameters: {"user_id"=>"1"}
+Completed 404 Not Found in 1ms (ActiveRecord: 0.0ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Artwork without an ID:
+  app/controllers/artworks_controller.rb:4:in `index'
+
+Started GET "/users/1/artworks" for ::1 at 2022-06-30 15:43:44 -0400
+Processing by ArtworksController#index as HTML
+  Parameters: {"user_id"=>"1"}
+Completed 404 Not Found in 1ms (ActiveRecord: 0.0ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Artwork without an ID:
+  app/controllers/artworks_controller.rb:4:in `index'
+
+Started POST "/__better_errors/c35ac6f9cac3f0be/variables" for ::1 at 2022-06-30 15:43:45 -0400
+Started GET "/users/1/artworks" for ::1 at 2022-06-30 15:46:11 -0400
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/appacademystudent/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.8/lib/active_record/log_subscriber.rb:98
+Processing by ArtworksController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mArtwork Load (3.3ms)[0m  [1m[34mSELECT  "artworks".* FROM "artworks" WHERE "artworks"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/artworks_controller.rb:4
+Completed 404 Not Found in 75ms (ActiveRecord: 15.8ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Artwork with 'id'=1:
+  app/controllers/artworks_controller.rb:4:in `index'
+
+Started POST "/__better_errors/2e5fd5aa340fba8f/variables" for ::1 at 2022-06-30 15:46:11 -0400
+Started GET "/users/1/artworks" for ::1 at 2022-06-30 15:46:12 -0400
+Processing by ArtworksController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mArtwork Load (1.9ms)[0m  [1m[34mSELECT  "artworks".* FROM "artworks" WHERE "artworks"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/artworks_controller.rb:4
+Completed 404 Not Found in 6ms (ActiveRecord: 1.9ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Artwork with 'id'=1:
+  app/controllers/artworks_controller.rb:4:in `index'
+
+Started POST "/__better_errors/18819d340e9e2a7f/variables" for ::1 at 2022-06-30 15:46:12 -0400
+Started GET "/users/1/artworks" for ::1 at 2022-06-30 16:04:15 -0400
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/appacademystudent/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.8/lib/active_record/log_subscriber.rb:98
+Processing by ArtworksController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mArtwork Load (1.3ms)[0m  [1m[34mSELECT  "artworks".* FROM "artworks" WHERE "artworks"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/artworks_controller.rb:4
+Completed 404 Not Found in 63ms (ActiveRecord: 15.9ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Artwork with 'id'=1:
+  app/controllers/artworks_controller.rb:4:in `index'
+
+Started POST "/__better_errors/648ba407321e7a02/variables" for ::1 at 2022-06-30 16:04:16 -0400
+Started GET "/users/1/artworks" for ::1 at 2022-06-30 16:04:16 -0400
+Processing by ArtworksController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mArtwork Load (6.1ms)[0m  [1m[34mSELECT  "artworks".* FROM "artworks" WHERE "artworks"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/artworks_controller.rb:4
+Completed 404 Not Found in 8ms (ActiveRecord: 6.1ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Artwork with 'id'=1:
+  app/controllers/artworks_controller.rb:4:in `index'
+
+Started POST "/__better_errors/b2ef5568190f31ea/variables" for ::1 at 2022-06-30 16:04:16 -0400
+Started GET "/users/1/artworks" for ::1 at 2022-06-30 16:04:18 -0400
+Processing by ArtworksController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mArtwork Load (1.0ms)[0m  [1m[34mSELECT  "artworks".* FROM "artworks" WHERE "artworks"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/artworks_controller.rb:4
+Completed 404 Not Found in 4ms (ActiveRecord: 1.0ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Artwork with 'id'=1:
+  app/controllers/artworks_controller.rb:4:in `index'
+
+Started POST "/__better_errors/5e97df336b73f407/variables" for ::1 at 2022-06-30 16:04:18 -0400
+  [1m[36mArtwork Load (1.4ms)[0m  [1m[34mSELECT "artworks".* FROM "artworks"[0m
+Started GET "/users/1/artworks" for ::1 at 2022-06-30 16:07:15 -0400
+  [1m[35m (1.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/appacademystudent/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.8/lib/active_record/log_subscriber.rb:98
+Processing by ArtworksController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mArtwork Load (1.1ms)[0m  [1m[34mSELECT  "artworks".* FROM "artworks" WHERE "artworks"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/artworks_controller.rb:4
+Completed 404 Not Found in 53ms (ActiveRecord: 11.5ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Artwork with 'id'={:artist_id=>nil}:
+  app/controllers/artworks_controller.rb:4:in `index'
+
+Started POST "/__better_errors/aa6fc778323e527d/variables" for ::1 at 2022-06-30 16:07:16 -0400
+Started GET "/users/1/artworks" for ::1 at 2022-06-30 16:07:16 -0400
+Processing by ArtworksController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mArtwork Load (2.2ms)[0m  [1m[34mSELECT  "artworks".* FROM "artworks" WHERE "artworks"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/artworks_controller.rb:4
+Completed 404 Not Found in 10ms (ActiveRecord: 2.2ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Artwork with 'id'={:artist_id=>nil}:
+  app/controllers/artworks_controller.rb:4:in `index'
+
+Started POST "/__better_errors/3ef71f9ac0b65592/variables" for ::1 at 2022-06-30 16:07:17 -0400
+Started GET "/users/1/artworks" for ::1 at 2022-06-30 16:07:43 -0400
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/appacademystudent/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.8/lib/active_record/log_subscriber.rb:98
+Processing by ArtworksController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mArtwork Load (1.5ms)[0m  [1m[34mSELECT  "artworks".* FROM "artworks" WHERE "artworks"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/artworks_controller.rb:4
+Completed 404 Not Found in 52ms (ActiveRecord: 14.7ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Artwork with 'id'={:artist_id=>nil}:
+  app/controllers/artworks_controller.rb:4:in `index'
+
+Started POST "/__better_errors/fd5506648115d848/variables" for ::1 at 2022-06-30 16:07:43 -0400
+Started GET "/users/1/artworks" for ::1 at 2022-06-30 16:07:44 -0400
+Processing by ArtworksController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mArtwork Load (3.5ms)[0m  [1m[34mSELECT  "artworks".* FROM "artworks" WHERE "artworks"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/artworks_controller.rb:4
+Completed 404 Not Found in 8ms (ActiveRecord: 3.5ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Artwork with 'id'={:artist_id=>nil}:
+  app/controllers/artworks_controller.rb:4:in `index'
+
+Started POST "/__better_errors/ee9b9633325f3890/variables" for ::1 at 2022-06-30 16:07:44 -0400
+Started GET "/users/1/artworks" for ::1 at 2022-06-30 16:08:25 -0400
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/appacademystudent/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.8/lib/active_record/log_subscriber.rb:98
+Processing by ArtworksController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mArtwork Load (1.5ms)[0m  [1m[34mSELECT  "artworks".* FROM "artworks" WHERE "artworks"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/artworks_controller.rb:5
+Completed 404 Not Found in 61ms (Views: 0.4ms | ActiveRecord: 17.8ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Artwork with 'id'={:artist_id=>nil}:
+  app/controllers/artworks_controller.rb:5:in `index'
+
+Started POST "/__better_errors/a624a7dfe21cc022/variables" for ::1 at 2022-06-30 16:08:25 -0400
+Started GET "/users/1/artworks" for ::1 at 2022-06-30 16:09:02 -0400
+  [1m[35m (1.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/appacademystudent/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.8/lib/active_record/log_subscriber.rb:98
+Processing by ArtworksController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mArtwork Load (1.3ms)[0m  [1m[34mSELECT  "artworks".* FROM "artworks" WHERE "artworks"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/artworks_controller.rb:5
+Completed 404 Not Found in 78ms (ActiveRecord: 24.8ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Artwork with 'id'={:artist_id=>nil}:
+  app/controllers/artworks_controller.rb:5:in `index'
+
+Started POST "/__better_errors/2ea608695c936c6f/variables" for ::1 at 2022-06-30 16:09:03 -0400
+Started GET "/users/1/artworks" for ::1 at 2022-06-30 16:09:51 -0400
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/appacademystudent/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.8/lib/active_record/log_subscriber.rb:98
+Processing by ArtworksController#index as HTML
+  Parameters: {"user_id"=>"1"}
+Completed 404 Not Found in 53ms (ActiveRecord: 15.8ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Artwork without an ID:
+  app/controllers/artworks_controller.rb:3:in `index'
+
+Started POST "/__better_errors/8207b286aece4301/variables" for ::1 at 2022-06-30 16:09:51 -0400
+Started GET "/users/1/artworks" for ::1 at 2022-06-30 16:09:53 -0400
+Processing by ArtworksController#index as HTML
+  Parameters: {"user_id"=>"1"}
+Completed 404 Not Found in 2ms (ActiveRecord: 0.0ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Artwork without an ID:
+  app/controllers/artworks_controller.rb:3:in `index'
+
+Started POST "/__better_errors/16e5d8a4a6198c35/variables" for ::1 at 2022-06-30 16:09:53 -0400
+Started GET "/users/1/artworks" for ::1 at 2022-06-30 16:10:39 -0400
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/appacademystudent/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.8/lib/active_record/log_subscriber.rb:98
+Processing by ArtworksController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mArtwork Load (3.4ms)[0m  [1m[34mSELECT  "artworks".* FROM "artworks" WHERE "artworks"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/artworks_controller.rb:3
+Completed 404 Not Found in 61ms (ActiveRecord: 24.3ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Artwork with 'id'=1:
+  app/controllers/artworks_controller.rb:3:in `index'
+
+Started POST "/__better_errors/577c6d799f10ee1f/variables" for ::1 at 2022-06-30 16:10:40 -0400
+Started GET "/users/1/artworks" for ::1 at 2022-06-30 16:12:35 -0400
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/appacademystudent/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.8/lib/active_record/log_subscriber.rb:98
+Processing by ArtworksController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/artworks_controller.rb:3
+  [1m[36mArtwork Load (1.6ms)[0m  [1m[34mSELECT "artworks".* FROM "artworks" WHERE "artworks"."artist_id" = $1[0m  [["artist_id", 1]]
+  ↳ app/controllers/artworks_controller.rb:5
+  [1m[36mArtwork Load (4.3ms)[0m  [1m[34mSELECT "artworks".* FROM "artworks" INNER JOIN "artwork_shares" ON "artworks"."id" = "artwork_shares"."artwork_id" WHERE "artwork_shares"."viewer_id" = $1[0m  [["viewer_id", 1]]
+  ↳ app/controllers/artworks_controller.rb:5
+Completed 200 OK in 182ms (Views: 48.7ms | ActiveRecord: 38.0ms)
+
+
+Started GET "/users/1/artworks" for ::1 at 2022-06-30 16:13:54 -0400
+Processing by ArtworksController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mUser Load (3.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/artworks_controller.rb:4
+  [1m[36mArtwork Load (0.8ms)[0m  [1m[34mSELECT "artworks".* FROM "artworks" WHERE "artworks"."artist_id" = $1[0m  [["artist_id", 1]]
+  ↳ app/controllers/artworks_controller.rb:5
+  [1m[36mArtwork Load (0.6ms)[0m  [1m[34mSELECT "artworks".* FROM "artworks" INNER JOIN "artwork_shares" ON "artworks"."id" = "artwork_shares"."artwork_id" WHERE "artwork_shares"."viewer_id" = $1[0m  [["viewer_id", 1]]
+  ↳ app/controllers/artworks_controller.rb:5
+Completed 200 OK in 118ms (Views: 47.6ms | ActiveRecord: 25.5ms)
+
+

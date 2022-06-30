@@ -1,7 +1,8 @@
 class ArtworksController < ApplicationController
     def index
-        @artworks = Artwork.all
-        render json: @artworks
+        # Find return an instance
+        @user = User.find(params[:user_id])
+        render json: { "Owned By:" => @user.artworks, "Shared With:" => @user.shared_artworks }
     end
 
     def create
