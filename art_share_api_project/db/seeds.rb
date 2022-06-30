@@ -23,3 +23,7 @@ ArtworkShare.create(artwork_id: artwork3, viewer_id: user1)
 ArtworkShare.create(artwork_id: artwork2, viewer_id: user2)
 ArtworkShare.create(artwork_id: artwork1, viewer_id: user2)
 ArtworkShare.create(artwork_id: artwork4, viewer_id: user2)
+
+#may or may not work
+Comment.create(user_id: user1.id, artwork_id: artwork1.id, body: "Banksy is a goat")
+Comment.create(user_id: user2.id, artwork_id: artwork3.id, body: "Nice ear")
