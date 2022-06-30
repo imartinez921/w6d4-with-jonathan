@@ -3,10 +3,6 @@ class UsersController < ApplicationController
         @users = User.all
         render json: @users
     end
-    
-    def user_params
-        params.require(:user).permit(:name, :email, :id)
-    end
 
     def create
         # render json: params
@@ -39,6 +35,12 @@ class UsersController < ApplicationController
     def destroy
         @user = User.find(params[:id])
         @user.destroy
-        redirect_to user_url
+        redirect_to "/users"
+    end
+
+
+    private
+    def user_params
+        params.require(:user).permit(:id, :username)
     end
 end
